@@ -141,8 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
     img.src = canvas.toDataURL();
 
     img.style.position = "absolute";
-    img.style.top = "15.4%";
-    img.style.left = "50%";
+    img.style.top = "18%";
+    img.style.right = "26.5%";
     img.style.transform = "translateX(-50%)";
     img.style.width = "150px";
 
@@ -150,6 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resultContainer.appendChild(img);
 
     addDownload(canvas);
+    addRetake();
   }
 
   function addDownload(canvas) {
@@ -165,5 +166,21 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     resultContainer.appendChild(btn);
+  }
+
+  function addRetake() {
+    const retakeBtn = document.createElement("button");
+    retakeBtn.className = "retake-btn";
+    retakeBtn.textContent = "Retake";
+
+    retakeBtn.onclick = () => {
+      startBtn.style.display = "block";
+
+      capturedImages = [];
+
+      switchScreen("photobooth");
+    };
+
+    resultContainer.appendChild(retakeBtn);
   }
 });

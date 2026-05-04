@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap");
 
 :root {
   --brown: #824c2f;
@@ -43,28 +43,27 @@ body {
   position: absolute;
   background-color: transparent;
   outline: none;
-  font-family: "Indie Flower";
+  font-family: "Bitcount Grid Single";
   font-size: 2rem;
   border: none;
-  /* animation: buttonShake 1s steps(2, jump-none) infinite; */
-  color: var(--brown);
 }
 
 #enterBooth {
   top: 50%;
-  right: 30%;
+  right: 26%;
+  color: #824c2f;
 }
 
 #startCapture {
   top: 40%;
-  left: 44%;
+  left: 43%;
   z-index: 1;
+  color: #efe095;
 }
 
 #enterBooth:hover,
 #startCapture:hover {
   cursor: pointer;
-  color: var(--red);
 }
 
 .screen {
@@ -111,8 +110,8 @@ body {
   left: 46%;
   transform: translateX(-50%);
   font-size: 2rem;
-  font-family: "Indie Flower";
-  color: var(--red);
+  font-family: "Bitcount Grid Single";
+  color: #efe095;
   z-index: 2;
   display: none;
 }
@@ -121,25 +120,35 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("assets/photo_result.png") center/cover no-repeat;
+  background: url("assets/photo-result.png") center/cover no-repeat;
   z-index: -1;
 }
 
 .download-btn {
-  padding: 6px 12px;
+  padding: 8px 16px;
   background-color: #efe095;
   color: #891d1a;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Bitcount Grid Single";
   font-size: 1rem;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   position: absolute;
-  bottom: 5%;
-  left: 50%;
+  top: 46%;
+  right: 6%;
   transform: translateX(-50%);
 }
-.download-btn:hover {
+.download-btn:hover,
+.retake-btn:hover {
   cursor: pointer;
-  background-color: #891d1a;
+}
+.retake-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  font-size: 1.2rem;
   color: #efe095;
+  font-family: "Indie flower";
+  top: 56%;
+  right: 9%;
+  transform: translateX(-50%);
 }
