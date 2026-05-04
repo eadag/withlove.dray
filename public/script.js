@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ctx = canvas.getContext("2d");
 
     const frame = new Image();
-    frame.src = "/assets/polkadots-bg-remove.png";
+    frame.src = "assets/polkadots-bg-remove.png";
 
     await new Promise((res) => (frame.onload = res));
 
